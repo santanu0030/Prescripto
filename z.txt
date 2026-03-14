@@ -1,0 +1,13 @@
+{
+  "id": 1710420000,
+  "name": "Rahul Das",
+  "email": "rahul@gmail.com",
+  "phone": "9876543210",
+  "gender": "Male",
+  "dob": "1998-06-12",
+  "age": 26,
+  "bloodGroup": "B+",
+  "emergencyContact": "9876543000",
+  "address": "Salt Lake, Kolkata",
+  "image": "File"
+}
