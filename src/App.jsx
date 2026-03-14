@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from "./components/Footer"
 import { Toaster } from 'react-hot-toast';
 import About from './pages/Aboutpage';
-import Contact from './pages/ContactPage';
+import Contact from './pages/Contactpage';
 import Doctors from './pages/AllDoctors';
 import Appointments from './pages/Appointment';
 import CreateAccount from './pages/CreateAccount';
