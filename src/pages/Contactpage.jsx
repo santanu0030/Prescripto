@@ -32,7 +32,7 @@ const Contact = () => {
 
         <p className="text-gray-500 leading-relaxed">
           Tel: (+91) 75850-46672 <br />
-          Email: karanhimadri1234@gmail.com
+          Email: support@prescripto.com
         </p>
 
         <p className="font-semibold text-lg text-gray-700">

@@ -1,14 +1,12 @@
-
 import { useState } from "react";
 import { assets } from "../assets/assets";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 
 const Navbar = () => {
-
   const { isLoggedIn, logoutPatient, getPatientImageUrl } = useAppContext();
-
   const navigate = useNavigate();
+
   const [showMenu, setShowMenu] = useState(false);
 
   // Navigate helper
@@ -19,14 +17,13 @@ const Navbar = () => {
   };
 
   // Logout handler
-  const handleLogout = async () => {
-    await logoutPatient();
+  const handleLogout = () => {
+    logoutPatient();
     navigate("/");
   };
 
   return (
     <>
-      {/* ================= NAVBAR ================= */}
       <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-md flex items-center justify-between text-sm py-4 px-6 border-b border-gray-300">
 
         {/* Logo */}
@@ -38,21 +35,21 @@ const Navbar = () => {
         />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-start gap-6 font-medium">
+        <ul className="hidden md:flex items-center gap-6 font-medium">
 
-          <NavLink to="/" className="hover:text-primary">
+          <NavLink to="/" className="hover:text-blue-600">
             <li className="py-1">HOME</li>
           </NavLink>
 
-          <NavLink to="/doctors" className="hover:text-primary">
+          <NavLink to="/doctors" className="hover:text-blue-600">
             <li className="py-1">ALL DOCTORS</li>
           </NavLink>
 
-          <NavLink to="/about" className="hover:text-primary">
+          <NavLink to="/about" className="hover:text-blue-600">
             <li className="py-1">ABOUT</li>
           </NavLink>
 
-          <NavLink to="/contact" className="hover:text-primary">
+          <NavLink to="/contact" className="hover:text-blue-600">
             <li className="py-1">CONTACT</li>
           </NavLink>
 
@@ -68,10 +65,14 @@ const Navbar = () => {
               <img
                 className="w-8 h-8 rounded-full object-cover"
                 src={getPatientImageUrl()}
-                alt=""
+                alt="profile"
               />
 
-              <img className="w-2.5" src={assets.dropdown_icon} alt="" />
+              <img
+                className="w-2.5"
+                src={assets.dropdown_icon}
+                alt="dropdown"
+              />
 
               {/* Dropdown */}
               <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 hidden group-hover:block">
@@ -102,29 +103,27 @@ const Navbar = () => {
                 </div>
 
               </div>
+
             </div>
-
           ) : (
-
-            /* Login + Create Account Buttons */
+            /* Login + Register (Desktop) */
             <div className="hidden md:flex items-center gap-3">
 
               <button
                 onClick={() => goTo("/login")}
-                className="border border-primary text-blue-600 cursor-pointer px-6 py-2 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-all"
+                className="border border-blue-600 text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-all"
               >
                 Login
               </button>
 
               <button
                 onClick={() => goTo("/register")}
-                className="bg-blue-600 cursor-pointer text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700/90 transition-all"
+                className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-all"
               >
                 Create Account
               </button>
 
             </div>
-
           )}
 
           {/* Mobile Menu Icon */}
@@ -132,59 +131,85 @@ const Navbar = () => {
             onClick={() => setShowMenu(true)}
             className="w-6 cursor-pointer md:hidden"
             src={assets.menu_icon}
-            alt=""
+            alt="menu"
           />
 
         </div>
       </div>
 
-
-      {/* ================= MOBILE MENU ================= */}
       <div
         className={`fixed top-0 bottom-0 ${showMenu ? "right-0" : "-right-full"} w-full h-screen bg-white z-50 transition-all duration-300 md:hidden`}
       >
 
-        {/* Header */}
+        {/* Mobile Header */}
         <div className="flex items-center justify-between px-5 py-6">
 
-          <img className="w-36" src={assets.logo} alt="" />
+          <img
+            className="w-36 cursor-pointer"
+            onClick={() => goTo("/")}
+            src={assets.logo}
+            alt="logo"
+          />
 
           <img
             className="w-7 cursor-pointer"
             onClick={() => setShowMenu(false)}
             src={assets.cross_icon}
-            alt=""
+            alt="close"
           />
 
         </div>
 
         {/* Mobile Links */}
-        <ul className="flex flex-col items-center gap-5 mt-8 text-lg font-medium">
+        <ul className="flex flex-col items-center gap-6 mt-10 text-lg font-medium">
 
-          <NavLink onClick={() => goTo("/")}><p>HOME</p></NavLink>
+          <li
+            onClick={() => goTo("/")}
+            className="cursor-pointer hover:text-blue-600"
+          >
+            HOME
+          </li>
 
-          <NavLink onClick={() => goTo("/doctors")}><p>ALL DOCTORS</p></NavLink>
+          <li
+            onClick={() => goTo("/doctors")}
+            className="cursor-pointer hover:text-blue-600"
+          >
+            ALL DOCTORS
+          </li>
 
-          <NavLink onClick={() => goTo("/about")}><p>ABOUT</p></NavLink>
+          <li
+            onClick={() => goTo("/about")}
+            className="cursor-pointer hover:text-blue-600"
+          >
+            ABOUT
+          </li>
 
-          <NavLink onClick={() => goTo("/contact")}><p>CONTACT</p></NavLink>
+          <li
+            onClick={() => goTo("/contact")}
+            className="cursor-pointer hover:text-blue-600"
+          >
+            CONTACT
+          </li>
 
-          {isLoggedIn && (
-            <>
+          {/* Mobile Login/Register */}
+          {!isLoggedIn && (
+            <div className="flex flex-col gap-4 mt-6">
+
               <button
                 onClick={() => goTo("/login")}
-                className="border border-primary text-primary px-6 py-2 rounded-full"
+                className="border border-blue-600 text-blue-600 px-8 py-2 rounded-full"
               >
                 Login
               </button>
 
               <button
                 onClick={() => goTo("/register")}
-                className="bg-primary text-white px-6 py-2 rounded-full"
+                className="bg-blue-600 text-white px-8 py-2 rounded-full"
               >
                 Create Account
               </button>
-            </>
+
+            </div>
           )}
 
         </ul>

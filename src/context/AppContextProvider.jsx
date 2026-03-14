@@ -65,10 +65,14 @@ const AppContextProvider = ({ children }) => {
         return { success: false, message: "No account found" };
       }
 
-      if (storedPatient.email === email && storedPatient.password === password) {
+      if (
+        storedPatient.email.toLowerCase() === email.toLowerCase() &&
+        storedPatient.password === password
+      ) {
         setPatient(storedPatient);
         setIsLoggedIn(true);
-        return { success: true };
+
+        return { success: true, message: "Login successful" };
       }
 
       return { success: false, message: "Invalid email or password" };
@@ -78,15 +82,9 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-  const logoutPatient = async () => {
+  const logoutPatient = () => {
     setPatient(null);
     setIsLoggedIn(false);
-
-    try {
-      await localForage.removeItem("patient");
-    } catch (error) {
-      console.error("Logout error:", error);
-    }
   };
 
   const getPatientImageUrl = () => {

@@ -15,7 +15,9 @@ const SpecialityMenu = () => {
         your appointment hassle-free.
       </p>
 
-      <div className="flex sm:justify-center gap-4 pt-5 w-full overflow-x-auto">
+      {/* Scroll Container */}
+      <div className="flex sm:justify-center gap-4 pt-5 w-full overflow-x-auto no-scrollbar">
+
         {specialityData.map((item) => (
           <Link
             key={item.speciality}
@@ -27,6 +29,7 @@ const SpecialityMenu = () => {
             <p>{item.speciality}</p>
           </Link>
         ))}
+
       </div>
     </div>
   );

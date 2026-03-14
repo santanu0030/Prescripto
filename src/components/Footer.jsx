@@ -83,7 +83,7 @@ const Footer = () => {
             {/* SOCIAL */}
             <div className="flex items-center gap-4 pt-2">
               <a
-                href="https://github.com/your-github"
+                href="https://github.com/himadri75"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-md bg-white shadow-sm hover:shadow-md hover:text-black transition"
@@ -92,7 +92,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/your-linkedin"
+                href="https://www.linkedin.com/in/himadri516/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-md bg-white shadow-sm hover:shadow-md hover:text-blue-600 transition"
@@ -101,7 +101,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://your-project-info-link.com"
+                href="https://himadri.me"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition"

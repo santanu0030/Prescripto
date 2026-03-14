@@ -99,10 +99,10 @@ const PatientProfileForm = ({ patient }) => {
 
         <div className="grid grid-cols-[1fr_3fr] gap-y-4">
 
-          <label>Email</label>
+          <label>Email:</label>
           <p className="text-blue-500">{userData.email}</p>
 
-          <label>Phone</label>
+          <label>Phone:</label>
           {isEdit ? (
             <input
               className="bg-gray-100 px-2 py-1 rounded"
@@ -115,7 +115,7 @@ const PatientProfileForm = ({ patient }) => {
             <p>{userData.phone}</p>
           )}
 
-          <label>Address</label>
+          <label>Address:</label>
           {isEdit ? (
             <input
               className="bg-gray-100 px-2 py-1 rounded"
@@ -143,7 +143,7 @@ const PatientProfileForm = ({ patient }) => {
 
         <div className="grid grid-cols-[1fr_3fr] gap-y-4">
 
-          <label>Gender</label>
+          <label>Gender:</label>
           {isEdit ? (
             <select
               className="bg-gray-100 px-2 py-1 rounded w-40"
@@ -161,7 +161,7 @@ const PatientProfileForm = ({ patient }) => {
             <p>{userData.gender}</p>
           )}
 
-          <label>Date of Birth</label>
+          <label>Date of Birth:</label>
           {isEdit ? (
             <input
               type="date"
@@ -175,7 +175,7 @@ const PatientProfileForm = ({ patient }) => {
             <p>{userData.dob}</p>
           )}
 
-          <label>Age</label>
+          <label>Age:</label>
           {isEdit ? (
             <input
               className="bg-gray-100 px-2 py-1 rounded w-20"
@@ -188,7 +188,7 @@ const PatientProfileForm = ({ patient }) => {
             <p>{userData.age}</p>
           )}
 
-          <label>Blood Group</label>
+          <label>Blood Group:</label>
           {isEdit ? (
             <select
               className="bg-gray-100 px-2 py-1 rounded w-32"

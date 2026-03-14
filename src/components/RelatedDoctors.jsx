@@ -27,8 +27,8 @@ const RelatedDoctors = ({ docId, speciality }) => {
         Simply browse through our extensive list of trusted doctors.
       </p>
 
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-6">
-        {relDocs.map(( item, i) => (
+      <div className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pt-6">
+        {relDocs.map((item, i) => (
           <Doctor
             key={i}
             doctorInfo={item}
