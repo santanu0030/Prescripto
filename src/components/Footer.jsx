@@ -83,7 +83,7 @@ const Footer = () => {
             {/* SOCIAL */}
             <div className="flex items-center gap-4 pt-2">
               <a
-                href="https://github.com/himadri75"
+                href="https://github.com/santanu0030"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-md bg-white shadow-sm hover:shadow-md hover:text-black transition"
@@ -92,7 +92,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/himadri516/"
+                href="https://www.linkedin.com/in/santanu-das-b906a0310/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-md bg-white shadow-sm hover:shadow-md hover:text-blue-600 transition"
@@ -101,7 +101,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://himadri.me"
+                href="https://github.com/santanu0030/Prescripto"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition"
@@ -115,7 +115,7 @@ const Footer = () => {
             <p className="text-gray-500 text-xs pt-3 border-t">
               Designed by{" "}
               <span className="font-medium text-gray-700">
-                Himadri Karan
+                Santanu Das
               </span>{" "}
               (TECB)
             </p>
