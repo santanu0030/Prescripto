@@ -94,12 +94,6 @@ Prescripto-app/
 
 ## 👨‍💻 Developer Profile
 
-**Himadri Karan**  
-*Backend Developer & Business Solutions Specialist*
+**Santanu Das**  
+*Full Stack Developer*
 
-- 📧 **Email**: [Karanhimadri1234@gmail.com](mailto:Karanhimadri1234@gmail.com)
-- 💼 **LinkedIn**: [linkedin.com/in/himadrikaran](https://linkedin.com/in/himadrikaran)  
-- 🌐 **Portfolio**: [Himadri.me](https://himadri.me)
-- � **GitHub**: [github.com/karanhimadri](https://github.com/karanhimadri)
-
----
